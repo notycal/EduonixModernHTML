@@ -1,0 +1,264 @@
+/* installed ext live server so we don't 
+    have to keep refreshing */
+
+h1 { 
+    color : red;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgb(66, 22, 22) ;
+}
+.title {
+    color: yellowgreen;
+}
+#italic {
+    color: orange;
+}
+a {
+    text-decoration-line: none;
+}
+
+nav {
+    background-color: aquamarine;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+.nav-wrapper {
+    background-color: blue;
+}
+
+.container {
+        border: 15px solid red;
+        /* top, right, bottom, left?? */
+        margin: 50px 75px 100px 125px; 
+        /* inside padding 30px all sides, can do sides separately */
+        padding: 30px;
+}
+.box {
+    /* default is block, inline ignores height & width */
+   /*  display: inline-block;zz */
+    height: 200px;
+    width: 200px;
+    background: blue;
+    /* top & bottom, left & right ?? */
+    margin: 10px;
+   /* box-shadow: 8px 8px 10px 10px rgb(49, 49, 49) inset; */
+}
+
+/* animation */
+@keyframes fadeMe{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#box1{
+        animation-name: fadeMe;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+}
+
+#box2{
+    border-radius: 10%;
+    background-image: radial-gradient(circle  purple orange yellow white purple);
+}
+
+@keyframes getBigger{
+    0%{transform: scale(1);}
+    50%{transform: scale(2);}
+    100%{transform: scale(.5);}
+}
+
+/* too annoying
+/* #box3{
+/* doesn't work animation: getBigger infinite 8x ease-in-out; shorter ver of #box1 */
+/*  animation-name: getBigger;
+/*      animation-duration: 5s;
+/*      animation-iteration-count: 1;
+ /*     animation-timing-function: ease-in-out ;
+/*      border-radius : 50%; /* change to circle */
+ /*     background: orange; */
+
+
+@keyframes changeColors {
+    0% {background-color: grey;}
+    25% {background-color: green;}
+    50% {background-color: yellow;}
+    75% {background-color: blueviolet;}
+    100% {background-color: red;}
+
+}    
+
+#box4 {
+    animation: changeColors ;
+    animation-duration: 5s;
+    animation-iteration-count: 2s;
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px ;}
+    50% {left: 100px; top: 200px ;}
+    75% {left: 0px; top: 200px ;}
+    100% {left: 0px;  top: 0px ;}
+     
+}
+
+#box5 {
+    
+    position: relative;
+    background: red;
+    animation: moveBox;
+    animation-duration: 5s;
+    animation-iteration-count: 15s;
+
+}
+
+#box6 {
+    top: 100px;
+    left: 200px;
+    position: fixed;
+
+}
+
+/* html { */
+   /* background-image: url(DSCN2254.JPG); */
+   /*     background-size: cover;  */
+  /*   background-image: linear-gradient(to right, red, yellow, blue); */
+
+
+
+.img1 {
+    box-shadow: 5px 5px 3px  grey;
+}
+.circle-img{
+    border-radius: 50%;
+    box-shadow: 8px 8px 10px 10px grey;
+}
+
+.circle-img2{
+    border-radius: 25%;
+    box-shadow: 8px 8px 10px 10px grey;
+}
+
+.flex {
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content : space-around;
+}
+
+/* Contact Page */
+
+form input {
+    display: block;
+    margin: 30px;
+}
+
+form textarea {
+    display: block;
+    margin: 30px;
+}
+
+form button {
+    display: block;
+    margin: 30px;
+} 
+
+.row {
+    margin: 30px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content:  center;
+}
+
+.input-field {
+    margin: 20px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: lightgoldenrodyellow;
+    color: #444;
+}
+
+.Box {
+    background-color: lightgoldenrodyellow;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col 1 / span  2;
+    grid-row: row 1;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row 1;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col 1 / span 5;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(tan,green,blue,yellow) ;
+}
+.d {
+    grid-column: col 4 / span 2;
+    grid-row: row 2;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 4 / span  2;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 1 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(green,tan,yellow,blue) ;
+}
+
+
+
+
+
+/*
+form input, textarea, button {
+    display: block;
+    margin: 30px;
+}
+*/
